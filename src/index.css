@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: "Noto Sans";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  color: #333333;
+  /*background-color: #cccccc;*/
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+p, a{
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+a{
+  text-decoration: none;
+}
+input:focus {
+  outline: none;
+}
+.search {
+  width: 650px;
+  padding: 0 20px 0 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.search-input{
+  width: 490px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid darkgrey;
+}
+.search-input-group {
+  display: flex;
+  justify-content: flex-start;
+}
+.autocompleteItemList{
+  width: 490px;
+  position: absolute;
+  top: 49px;
+  left: 0;
+  margin: 0 30px;
+  background-color: white;
+  border: 1px solid darkgrey;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 10;
+}
+.close {
+  position: absolute;
+  top: 13px;
+  right: 150px;
+}
+.autocompleteItemList li {
+  padding: 5px 11px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.autocompleteItemList li a{
+  text-decoration: none;
+  color: black;
+}
+.autocompleteItemList li a:hover {
+  color: #BD1522;
+}
+.product-page {
+  padding: 30px 10px;
+}
+.product-description h3 {
+font-size: 28px;
+line-height: 38px;
+}
+.product-description p {
+  font-size: 18px;
+  line-height: 25px;
+}
+.price {
+  color: #BD1522;
+  font-size: 28px;
+  line-height: 38px;
+  padding-top: 20px;
+}
+.characteristics li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  position: relative;
+}
+.menu-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 0 100px;
+}
+.menu-header li{
+  padding: 0 10px;
+}
+.menu-header li a{
+  display: block;
+  width: 100%;
+}
+.header-contact {
+  padding: 0 0 0 30px;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 35px;
+  right: 0;
+
+}
+.header-contact li {
+  padding: 0 0 0 30px;
+}
+.menu-btn-group{
+  width: 300px;
+  position: relative;
+}
+.btn-menu{
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.btn-menu i {
+  padding: 0 10px;
+}
+.icons-header {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 0 10px;
+}
+.icons-header i {
+  padding: 0  0 0 20px;
+}
+.categories-list, .category-item-list {
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px #ccc;
+  z-index: 10;
+}
+.categories-list{
+  top: 50px;
+  left: 0;
+  height: 100vh;
+}
+.category-item-list {
+  top: -10px;
+  left: 100%;
+}
+.categories-list hr {
+  display: none;
+  margin: 40px 0 20px 0;
+}
+.category-item {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.category-item a:hover {
+  color: #BD1522;
+}
+.menu-header-adaptive {
+  display: none;
+  padding: 10px;
+}
+.phone-adaptive{
+  display: none;
+  padding: 10px
+}
