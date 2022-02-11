@@ -3,34 +3,40 @@ import {Link} from "react-router-dom";
 import Logo from '../img/logo.png';
 import {Autocomplete} from "../product/autocomplete/Autocomplete";
 import {MenuCategoryButton} from "../product/menuCategory/MenuCategoryButton";
+import {Cart} from '../shop/Cart';
+import '../css/header.css';
+import '../css/header-media.css';
+import {Star} from "../favorite/Star";
 
 export function Header () {
 
         return (
+            <div className='container'>
             <header>
                 <section className='section-header'>
                     <div className='logo'>
                     <Link to='/'><img src={Logo} alt="logo"/></Link></div>
                     <ul className='menu-header'>
-                        <li><a href="!#"> Доставка и оплата</a></li>
-                        <li><a href="!#">Сервис-центр</a></li>
-                        <li><a href="!#">Контакты</a></li>
-                        <li><a href="!#">Акции</a></li>
+                        <li><Link to='/delivery'> Доставка и оплата</Link></li>
+                        <li><Link to='/blog'>Блог</Link></li>
+                        <li><Link to='/contacts'>Контакты</Link></li>
+                        <li><Link to='/product/sale' >Акции</Link></li>
                     </ul>
                     <ul className='header-contact'>
-                        <li className='phone'>+38 (050) 194 51 16</li>
-                        <li><a href="!#">Войти</a></li>
+                        <li className='phone'><a href="tel:+380501945116">(050) 19 45 116</a></li>
+                        <li><Link to='/user'><i className="bi bi-person-circle" style={{fontSize: '30px'}}></i></Link></li>
                     </ul>
                 </section>
                 <section className='section-header'>
                 <MenuCategoryButton/>
                 <Autocomplete/>
                 <div className='icons-header'>
-                    <i className="bi bi-star"></i>
-                    <i className="bi bi-cart3"></i>
-                </div>
+                <Star/>
+                <Cart/></div>
                 </section>
+
             </header>
+            </div>
         );
 
 }

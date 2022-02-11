@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import {Link} from "react-router-dom";
 import {AutocompleteCollection} from "./AutocompleteCollection";
 import { getAutoComplete } from '../../../api';
 
@@ -29,23 +30,24 @@ export function Autocomplete(){
             inputSearch.style.borderBottomLeftRadius = '0';
             inputSearch.style.borderBottomRightRadius = '0';
         } else {
-            inputSearch.style.borderBottomLeftRadius = '5px';
-            inputSearch.style.borderBottomRightRadius = '5px';
+            inputSearch.style.borderBottomLeftRadius = '10px';
+            inputSearch.style.borderBottomRightRadius = '10px';
         }
-    }, [isSearchShow])
+    }, [isSearchShow]);
+
+
 
     return (
         <div className="search">
             <div className='search-input-group'>
             <input type="text" className="search-input" id='search-input'
-                   onChange={onChange}  placeholder="Поиск товара по каталогу"/>
-                <button type='button' className='btn btn-light'>Найти</button>
+                   onChange={onChange}  placeholder="Поиск..."/>
+                <i className="bi bi-x-lg close" onClick={handleClose}></i>
+                <Link to={`/search/${searchString}`} onClick={handleClose}><i className="bi bi-search"></i></Link>
             </div>
             {isSearchShow &&
             (<AutocompleteCollection items={items} close={handleClose} />)
             }
-            <i className="bi bi-x-lg close" onClick={handleClose}></i>
-
-        </div>
+          </div>
     )
 }

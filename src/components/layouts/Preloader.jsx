@@ -1,18 +1,10 @@
 export function Preloader() {
     
-    return  <div className="row">
-        <div className="spinner col s1 offset-s5">
-    <div className="preloader-wrapper active " >
-    <div className="spinner-layer spinner-red-only">
-      <div className="circle-clipper left">
-        <div className="circle"></div>
-      </div><div className="gap-patch">
-        <div className="circle"></div>
-      </div><div className="circle-clipper right">
-        <div className="circle"></div>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
+    return (
+        <div className="d-flex justify-content-center">
+            <div className="spinner-border" role="status">
+                <span className="visually-hidden">Загрузка...</span>
+            </div>
+        </div>
+    )
 }

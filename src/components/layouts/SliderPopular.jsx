@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import {Link} from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {getPopularProducts} from '../../api';
 import {ProductCard} from "../product/productCard/ProductCard";
+import '../css/slider-small.css'
 
 export default class SliderPopular extends Component {
     constructor(props) {
@@ -14,10 +14,9 @@ export default class SliderPopular extends Component {
         }
     }
     componentDidMount() {
-        console.log('render slider new')
         getPopularProducts().then(res => {
             this.setState({products: res});
-            console.log(res)
+            //console.log(res)
         })
             .catch(err =>
                 console.log(err))
@@ -27,7 +26,7 @@ export default class SliderPopular extends Component {
             dots: true,
             arrows: true,
             infinite: true,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 4000,
             speed: 1000,
             slidesToShow: 4,
@@ -44,7 +43,7 @@ export default class SliderPopular extends Component {
                     }
                 },
                 {
-                    breakpoint: 992,
+                    breakpoint: 991,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 1,
@@ -62,7 +61,7 @@ export default class SliderPopular extends Component {
                 {
                     breakpoint: 575,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 1,
                         slidesToScroll: 1
                     }
 
@@ -73,11 +72,11 @@ export default class SliderPopular extends Component {
             <div className='slider-small'>
                 <h1>Популярные товары</h1>
                 <Slider {...settings}>
-                    { this.state.products.map(product =>
+                     { this.state.products.map(product =>
                         <ProductCard key={product._id} product={product}/>
                     )
                     }
-                </Slider>
+               </Slider>
             </div>
         );
     }

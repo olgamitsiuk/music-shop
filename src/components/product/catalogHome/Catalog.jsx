@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
 import {getCategories} from "../../../api";
 import {CatalogItem} from "./CatalogItem";
-import '../../../css/catalog.css';
+import '../../css/catalog.css';
+import {Preloader} from "../../layouts/Preloader";
 
 
 export function Catalog (){
@@ -15,17 +16,15 @@ export function Catalog (){
         []);
 
     if (!isLoad) return (
-        <div className="spinner-border" role="status">
-            <span className="sr-only">Загрузка...</span>
-        </div>
+        <Preloader/>
     );
     let key = 0;
-    return (<>
+    return (<div className='catalog'>
         <h1>Каталог</h1>
         <div className='catalog-list' key="catalog_list"  >
             {categories.map(category =>
                 <CatalogItem key={"category_" + (key++)} item={category}></CatalogItem>
             )}
-        </div></>
+        </div></div>
     );
 }

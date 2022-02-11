@@ -1,8 +1,9 @@
 import  { useEffect, useState } from "react";
 import { MenuCategoryItem } from "./MenuCategoryItem";
 import { getCategories } from '../../../api';
+import {Link} from "react-router-dom";
 
-export function MenuCategoriesList (){
+export function MenuCategoriesList (props){
     const [categories, setCategories] = useState([]);
 
     useEffect( () => {
@@ -15,14 +16,14 @@ export function MenuCategoriesList (){
     return (
         <ul className='categories-list' key="category_list"  >
             {categories.map(category =>
-                <MenuCategoryItem key={"category_" + (key++)} item={category}></MenuCategoryItem>
+                <MenuCategoryItem key={"category_" + (key++)} item={category} close={props.close}/>
             )}
             <hr/>
             <li className='phone-adaptive'>+38 (050) 194 51 16</li>
-            <li><a href="!#" className='menu-header-adaptive'> Доставка и оплата</a></li>
-            <li><a href="!#" className='menu-header-adaptive'>Сервис-центр</a></li>
-            <li><a href="!#" className='menu-header-adaptive'>Контакты</a></li>
-            <li><a href="!#" className='menu-header-adaptive'>Акции</a></li>
+            <li><Link to='/delivery' className='menu-header-adaptive'> Доставка и оплата</Link></li>
+            <li><Link to='/blog' className='menu-header-adaptive'>Блог</Link></li>
+            <li><Link to='/contacts' className='menu-header-adaptive'>Контакты</Link></li>
+            <li><Link to='product/sale' className='menu-header-adaptive'>Акции</Link></li>
         </ul>
     );
 }

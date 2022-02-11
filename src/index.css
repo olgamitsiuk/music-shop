@@ -20,173 +20,92 @@ p, a{
 a{
   text-decoration: none;
 }
+a:hover{
+  color: #BD1522;
+}
 input:focus {
   outline: none;
 }
-.search {
-  width: 650px;
-  padding: 0 20px 0 30px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-.search-input{
-  width: 490px;
-  padding: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
-  border: 1px solid darkgrey;
-}
-.search-input-group {
-  display: flex;
-  justify-content: flex-start;
-}
-.autocompleteItemList{
-  width: 490px;
-  position: absolute;
-  top: 49px;
-  left: 0;
-  margin: 0 30px;
-  background-color: white;
-  border: 1px solid darkgrey;
-  border-top: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  z-index: 10;
-}
-.close {
-  position: absolute;
-  top: 13px;
-  right: 150px;
-}
-.autocompleteItemList li {
-  padding: 5px 11px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.autocompleteItemList li a{
-  text-decoration: none;
-  color: black;
-}
-.autocompleteItemList li a:hover {
-  color: #BD1522;
-}
-.product-page {
-  padding: 30px 10px;
-}
-.product-description h3 {
-font-size: 28px;
-line-height: 38px;
-}
-.product-description p {
-  font-size: 18px;
-  line-height: 25px;
-}
-.price {
-  color: #BD1522;
+h1{
+  padding: 20px 0;
   font-size: 28px;
-  line-height: 38px;
-  padding-top: 20px;
 }
-.characteristics li {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc;
-}
-.section-header {
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
+.app {
   position: relative;
 }
-.menu-header{
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px 0 100px;
+.slider-product {
+  width: 40%;
 }
-.menu-header li{
-  padding: 0 10px;
-}
-.menu-header li a{
-  display: block;
+.slider-product .slick-dots{
   width: 100%;
-}
-.header-contact {
-  padding: 0 0 0 30px;
-  display: flex;
-  justify-content: flex-end;
   position: absolute;
-  top: 35px;
-  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
 
 }
-.header-contact li {
-  padding: 0 0 0 30px;
-}
-.menu-btn-group{
-  width: 300px;
-  position: relative;
-}
-.btn-menu{
-  width: 100%;
-  text-align: left;
-  padding: 10px;
-  border-radius: 10px;
+.slider-product .slick-thumb li {
+  width: 30%;
+  height: auto;
   box-sizing: border-box;
+  padding: 0;
 }
-.btn-menu i {
-  padding: 0 10px;
+.slider-product .slick-thumb li a {
+  display: block;
+
+  padding: 0;
 }
-.icons-header {
-  position: absolute;
-  top: 30px;
-  right: 0;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 0 0 10px;
+.slider-product .slick-thumb li a img{
+
 }
-.icons-header i {
-  padding: 0  0 0 20px;
-}
-.categories-list, .category-item-list {
+.slider-product .slide {
   width: 100%;
-  padding: 10px;
-  position: absolute;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 0 0 10px #ccc;
-  z-index: 10;
+  margin-bottom: 100px;
 }
-.categories-list{
-  top: 50px;
-  left: 0;
-  height: 100vh;
+.slider-product .slide img {
+  width: 100%;
 }
-.category-item-list {
-  top: -10px;
-  left: 100%;
+.contact-info {
+  margin: 20px;
 }
-.categories-list hr {
-  display: none;
-  margin: 40px 0 20px 0;
+.contact-info h1{
+  margin: 0;
+  padding: 10px 0;
+  font-weight: bold;
 }
-.category-item {
-  position: relative;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
+.contact-info h5 {
+  font-weight: bold;
+  font-size: 18px;
 }
-.category-item a:hover {
-  color: #BD1522;
+.contact-info p {
+  font-size: 16px;
 }
-.menu-header-adaptive {
-  display: none;
-  padding: 10px;
+.delivery-page{
+  margin: 30px 0;
 }
-.phone-adaptive{
-  display: none;
-  padding: 10px
+.delivery-page h3 {
+  margin: 20px 10px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+}
+.delivery-page h5 {
+  margin: 20px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+.delivery-page img {
+  width: 100%;
+}
+@media (min-width: 0) and (max-width: 991px) {
+  .slider-product {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .delivery-page h3 {
+
+    font-size: 18px;
+
+  }
 }

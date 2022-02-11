@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import {Link} from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../../css/slider.css';
+import '../css/slider.css';
 import Slider1 from '../img/slider1.jpg';
 
 export default class SliderHome extends Component {
@@ -18,9 +18,8 @@ export default class SliderHome extends Component {
             slidesToShow: 1,
             slidesToScroll: 1
         };
-        console.log('render slider home')
         return (
-            <div>
+            <div className='slider-home'>
                 <Slider {...settings}>
                     <div>
                         <div className='slide'>
@@ -31,7 +30,7 @@ export default class SliderHome extends Component {
                                 <div className='line'></div>
                                 <p>Распродажа бас-гитарных усилителей</p>
                                 <Link to='product/sale' className='btn'>Выбрать</Link>
-                                <span>Акция действует с 01.02.2022 по 01.03.2022</span>
+
                             </div>
                         </div>
                     </div>
@@ -43,7 +42,7 @@ export default class SliderHome extends Component {
                                 <div className='line'></div>
                                 <p>Более 300 позиций со скидками</p>
                                 <Link to='product/sale' className='btn'>Выбрать</Link>
-                                <span>Акция действует с 01.02.2022 по 01.03.2022</span>
+
                             </div>
                         </div>
                     </div>
@@ -55,7 +54,7 @@ export default class SliderHome extends Component {
                                 <div className='line'></div>
                                 <p>Более 300 позиций со скидками</p>
                                 <Link to='product/sale' className='btn'>Выбрать</Link>
-                                <span>Акция действует с 01.02.2022 по 01.03.2022</span>
+
                             </div>
                         </div>
                     </div>

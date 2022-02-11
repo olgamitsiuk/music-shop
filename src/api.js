@@ -39,4 +39,7 @@ export const getPopularProducts = async () => {
     const response = await fetch(API_URL + 'product/popular');
     return await response.json();
 }
-
+export const getSaleProducts = async () => {
+    const response = await fetch(API_URL + 'product/sale');
+    return await response.json();
+}

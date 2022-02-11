@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import {Link} from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {getNewProducts} from '../../api';
@@ -14,10 +13,9 @@ export default class SliderNew extends Component {
         }
     }
     componentDidMount() {
-        console.log('render slider new')
         getNewProducts().then(res => {
             this.setState({products: res});
-            console.log(res)
+            //console.log(res)
         })
             .catch(err =>
                 console.log(err))
@@ -27,12 +25,13 @@ export default class SliderNew extends Component {
             dots: true,
             arrows: true,
             infinite: true,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 4000,
             speed: 1000,
             slidesToShow: 4,
             slidesToScroll: 1,
             initialSlide: 0,
+            adaptiveHeight: true,
             responsive: [
                 {
                     breakpoint: 1200,
@@ -62,7 +61,7 @@ export default class SliderNew extends Component {
                 {
                     breakpoint: 575,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 1,
                         slidesToScroll: 1
                     }
 

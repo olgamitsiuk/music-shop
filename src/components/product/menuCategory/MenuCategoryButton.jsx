@@ -13,7 +13,7 @@ export function MenuCategoryButton() {
         <div className='menu-btn-group'>
             <button type="button" className="btn btn-danger btn-menu" onClick={handleMenuShow} >
                 {isMenuShow
-                    ? <i className="bi bi-x-lg" onClick={hideMenu}></i>
+                    ? <i className="bi bi-x-lg"></i>
                     : <i className="bi bi-list"></i>} <span>Категории</span>
             </button>
             {isMenuShow &&
